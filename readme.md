@@ -278,7 +278,7 @@ Confidence:    3/5  (Fairly confident)
 
 This project was inspired by:
 
-- **"Can LLMs Generate Novel Research Ideas?"** — Yixing Jiang, Andrew Ng, et al. (Stanford)
+- **Andrew Ng, et al. (Stanford)** Agentic Paper Review
 - **LangGraph** by LangChain for the agent orchestration framework
 - **OpenReview** for providing access to ICLR peer review data
 
