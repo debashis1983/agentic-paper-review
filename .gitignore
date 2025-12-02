@@ -1,0 +1,52 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+.venv/
+env/
+ENV/
+
+# Environment variables (CRITICAL - API keys!)
+.env
+*.env
+.env.local
+
+# MCP files
+mcp_server.py
+test_mcp.py
+claude_desktop_config.json
+MCP_SETUP.md
+
+# Data files
+*.csv
+iclr_*.csv
+neurips_*.csv
+emnlp_*.csv
+learned_weights.json
+
+# Output files
+reviews_output/
+*.pdf
+*.json.bak
+
+INTEGRATION_SUMMARY.md
+QUICKSTART.md
+view_graph.py
+fetch_and_train.py
+download_openreview.py
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Logs
+*.log

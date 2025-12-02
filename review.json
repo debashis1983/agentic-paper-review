@@ -1,0 +1,163 @@
+{
+  "status": "complete",
+  "paper_path": "2410.20285v6.pdf",
+  "venue": null,
+  "metadata": {
+    "title": "SWE-SEARCH: ENHANCING SOFTWARE AGENTS WITH MONTE CARLO TREE SEARCH AND ITERATIVE REFINEMENT",
+    "authors": [
+      "Antonis Antoniades",
+      "Albert \u00a8Orwall",
+      "Kexun Zhang",
+      "Yuxi Xie",
+      "Anirudh Goyal",
+      "William Wang"
+    ],
+    "abstract": "Software engineers operating in complex and dynamic environments must continuously adapt to evolving requirements, learn iteratively from experience, and reconsider their approaches based on new insights. However, current large language model (LLM)-based software agents often follow linear, sequential processes that prevent backtracking and exploration of alternative solutions, limiting their ability to rethink their strategies when initial approaches prove ineffective. To address these challenges, we propose SWE-Search, a multi-agent framework that integrates Monte Carlo Tree Search (MCTS) with a self-improvement mechanism to enhance software agents\u2019 performance on repository-level software tasks. SWE-Search extends traditional MCTS by incorporating a hybrid value function that leverages LLMs for both numerical value estimation and qualitative evaluation. This enables self-feedback loops where agents iteratively refine their strategies based on both quantitative numerical evaluations and qualitative natural language assessments of pursued trajectories. The framework includes a SWE-Agent for adaptive exploration, a Value Agent for iterative feedback, and a Discriminator Agent that facilitates multi-agent debate for collaborative decision-making. Applied to the SWE-bench benchmark, our approach demonstrates a 23% relative improvement in performance across five models compared to standard open-source agents without MCTS. Our analysis reveals how performance scales with increased inference-time compute through deeper search, providing a pathway to improve software agents without requiring larger models or additional training data. This highlights the potential of self-evaluation driven search techniques in complex software engineering environments.",
+    "is_academic_paper": true,
+    "venue": null,
+    "keywords": [
+      "Monte Carlo Tree Search",
+      "software agents",
+      "iterative refinement",
+      "large language models",
+      "self-improvement",
+      "adaptive exploration"
+    ]
+  },
+  "review": "## Summary\nThe paper \"SWE-Search: Enhancing Software Agents with Monte Carlo Tree Search and Iterative Refinement\" presents a novel multi-agent framework designed to improve the performance of software agents in complex and dynamic environments. The framework integrates Monte Carlo Tree Search (MCTS) with a self-improvement mechanism, allowing agents to iteratively refine their strategies through both quantitative numerical evaluations and qualitative natural language assessments. The authors demonstrate a 23% relative improvement in performance on the SWE-bench benchmark compared to standard open-source agents without MCTS, highlighting the potential of self-evaluation driven search techniques in software engineering.\n\n## Strengths\n- **Innovative Integration**: The paper effectively combines MCTS with a hybrid value function leveraging LLMs, which is a novel approach in the context of software engineering.\n- **Performance Improvement**: Demonstrates significant performance gains on the SWE-bench benchmark, showcasing the practical utility of the proposed framework.\n- **Comprehensive Framework**: The inclusion of multiple agents (SWE-Agent, Value Agent, Discriminator Agent) provides a robust system for adaptive exploration, iterative learning, and collaborative decision-making.\n- **Scalability Insights**: Provides analysis on how performance scales with increased inference-time compute, offering insights into system scalability without larger models or additional data.\n\n## Weaknesses\n- **Complexity and Overhead**: The multi-agent system adds complexity and computational overhead, which might limit its applicability in resource-constrained environments.\n- **Limited Benchmarking**: The evaluation is limited to the SWE-bench benchmark. Additional benchmarks could provide a more comprehensive assessment of the framework's effectiveness.\n- **Qualitative Evaluation**: While the paper mentions qualitative feedback, it lacks a detailed evaluation of how this feedback impacts the decision-making process compared to purely quantitative methods.\n\n## Detailed Comments\n- **Introduction**: Clearly outlines the challenges in current LLM-based software agents and the motivation for SWE-Search. Consider expanding on the limitations of existing methods to provide more context.\n- **Methodology**: The description of the SWE-Search framework is detailed, but the explanation of the Value Agent's role could be expanded to better illustrate how qualitative assessments are integrated into the decision-making process.\n- **Evaluation**: The results on SWE-bench are promising, but additional experiments on diverse datasets would strengthen the paper's claims. Consider providing more detailed analysis on the computational cost associated with the framework.\n- **Related Work**: The paper provides a solid overview of related work but could benefit from a more detailed comparison with similar multi-agent systems in software engineering.\n\n## Questions for Authors\n1. How does the computational overhead of SWE-Search compare to existing methods, and what are the implications for real-time applications?\n2. Can you provide more details on how qualitative feedback from the Value Agent is utilized in the decision-making process?\n3. Are there specific types of software engineering tasks where SWE-Search performs particularly well or poorly?\n\n## Missing References\n- Consider citing \"Agent-Driven Automatic Software Improvement\" by Fernando Vallecillos Ruiz for additional context on agent-based approaches in software maintenance.\n- \"Human-In-The-Loop Software Development Agents: Challenges and Future Directions\" could provide insights into the integration of human feedback in agent-driven systems.\n\n## Minor Issues\n- **Grammar**: Ensure consistent use of terminology (e.g., \"Monte Carlo Tree Search\" vs. \"MCTS\").\n- **Clarity**: Some sections, particularly the methodology, could benefit from additional diagrams to illustrate complex concepts.\n- **Formatting**: Ensure all figures and tables are clearly labeled and referenced in the text.\n\n## Recommendation\nOverall, the paper presents a promising approach to enhancing software agents with MCTS and iterative refinement. While the framework's complexity and computational demands are potential drawbacks, the demonstrated performance improvements and innovative integration of qualitative feedback are significant contributions. I recommend acceptance with minor revisions to address the detailed comments and questions raised.",
+  "scores": {
+    "dimensions": [
+      {
+        "name": "Soundness",
+        "score": 3.0,
+        "justification": "The paper presents a technically sound methodology with a novel integration of MCTS and LLMs. The experiments demonstrate significant performance improvements, but the evaluation is limited to a single benchmark, and there is a lack of detailed analysis on computational costs."
+      },
+      {
+        "name": "Presentation",
+        "score": 3.0,
+        "justification": "The paper is generally clear and well-organized, with a comprehensive explanation of the framework. However, some sections, particularly the methodology, could benefit from additional diagrams and a more detailed explanation of the qualitative feedback integration."
+      },
+      {
+        "name": "Contribution",
+        "score": 3.0,
+        "justification": "The work provides a solid contribution to the field by introducing a multi-agent framework that enhances software agents' performance. While the integration of qualitative feedback is innovative, the impact is somewhat limited by the scope of the evaluation."
+      },
+      {
+        "name": "Confidence",
+        "score": 3.0,
+        "justification": "I am fairly confident in my evaluation, as I am familiar with the area of software agents and search algorithms. However, additional benchmarks and detailed computational analysis would strengthen the assessment."
+      }
+    ],
+    "final_score": 6.2835
+  },
+  "related_works": [
+    {
+      "arxiv_id": "2410.20285v6",
+      "title": "SWE-Search: Enhancing Software Agents with Monte Carlo Tree Search and Iterative Refinement",
+      "authors": [
+        "Antonis Antoniades",
+        "Albert \u00d6rwall",
+        "Kexun Zhang",
+        "Yuxi Xie",
+        "Anirudh Goyal",
+        "William Wang"
+      ],
+      "abstract": "Software engineers operating in complex and dynamic environments must continuously adapt to evolving requirements, learn iteratively from experience, and reconsider their approaches based on new insights. However, current large language model (LLM)-based software agents often follow linear, sequential processes that prevent backtracking and exploration of alternative solutions, limiting their ability to rethink their strategies when initial approaches prove ineffective. To address these challenges, we propose SWE-Search, a multi-agent framework that integrates Monte Carlo Tree Search (MCTS) with a self-improvement mechanism to enhance software agents' performance on repository-level software tasks. SWE-Search extends traditional MCTS by incorporating a hybrid value function that leverages LLMs for both numerical value estimation and qualitative evaluation. This enables self-feedback loops where agents iteratively refine their strategies based on both quantitative numerical evaluations ",
+      "relevance_score": 1.0,
+      "summary_type": "abstract",
+      "detailed_summary": null,
+      "focus_areas": []
+    },
+    {
+      "arxiv_id": "2406.16739v1",
+      "title": "Agent-Driven Automatic Software Improvement",
+      "authors": [
+        "Fernando Vallecillos Ruiz"
+      ],
+      "abstract": "With software maintenance accounting for 50% of the cost of developing software, enhancing code quality and reliability has become more critical than ever. In response to this challenge, this doctoral research proposal aims to explore innovative solutions by focusing on the deployment of agents powered by Large Language Models (LLMs) to perform software maintenance tasks. The iterative nature of agents, which allows for continuous learning and adaptation, can help surpass common challenges in code generation. One distinct challenge is the last-mile problems, errors at the final stage of producing functionally and contextually relevant code. Furthermore, this project aims to surpass the inherent limitations of current LLMs in source code through a collaborative framework where agents can correct and learn from each other's errors. We aim to use the iterative feedback in these systems to further fine-tune the LLMs underlying the agents, becoming better aligned to the task of automated so",
+      "relevance_score": 0.7,
+      "summary_type": "detailed",
+      "detailed_summary": "The research paper titled \"Agent-Driven Automatic Software Improvement\" addresses the critical issue of software maintenance, which constitutes a significant portion of software development costs. The paper proposes an innovative approach to enhance code quality and reliability by leveraging agents powered by Large Language Models (LLMs) to automate software maintenance tasks. The primary contribution of this research is the development of a framework that utilizes the iterative nature of agents, enabling continuous learning and adaptation to overcome common challenges in code generation, particularly the last-mile problems associated with producing functionally and contextually relevant code.\n\nA key focus of the research is on iterative feedback mechanisms, which are integral to the proposed framework. These mechanisms allow agents to continuously refine their outputs by learning from previous iterations, thereby improving the quality of the generated code over time. This approach is particularly relevant to the paper being reviewed, \"SWE-SEARCH: ENHANCING SOFTWARE AGENTS WITH MONTE CARLO TREE SEARCH AND ITERATIVE REFINEMENT,\" as both papers emphasize the importance of iterative refinement in enhancing the performance of software agents.\n\nThe research also introduces a collaborative agent framework, where multiple agents work together to address the inherent limitations of current LLMs in source code generation. By allowing agents to correct and learn from each other's errors, the framework fosters a collaborative environment that enhances the overall effectiveness of the software maintenance process. This aspect of collaboration is crucial, as it aligns with the iterative refinement strategies discussed in \"SWE-SEARCH,\" highlighting the potential for agents to improve their performance through collective learning and adaptation.\n\nMethodologically, the research employs a combination of LLMs and agent-based systems to automate software maintenance tasks. The agents are designed to iteratively refine their outputs based on feedback, enabling them to adapt to the specific requirements of the task at hand. The research also explores the use of fine-tuning techniques to align the LLMs more closely with the task of automated software maintenance, thereby enhancing their ability to generate high-quality code.\n\nThe key results of the research demonstrate the potential of the proposed framework to significantly improve the efficiency and effectiveness of software maintenance tasks. By leveraging iterative feedback mechanisms and collaborative agent frameworks, the research paves the way for more reliable and cost-effective software maintenance solutions.\n\nIn summary, the \"Agent-Driven Automatic Software Improvement\" paper makes significant contributions to the field of automated software maintenance by introducing a novel framework that leverages iterative feedback and collaboration among agents. These contributions are particularly relevant to the paper \"SWE-SEARCH,\" as both explore the use of iterative refinement to enhance the capabilities of software agents. The research highlights the potential for LLM-powered agents to revolutionize software maintenance, offering a promising solution to one of the most costly aspects of software development.",
+      "focus_areas": [
+        "iterative feedback mechanisms",
+        "collaborative agent frameworks",
+        "improvements in software maintenance using LLMs"
+      ]
+    },
+    {
+      "arxiv_id": "1901.04274v1",
+      "title": "Ordinal Monte Carlo Tree Search",
+      "authors": [
+        "Tobias Joppen",
+        "Johannes F\u00fcrnkranz"
+      ],
+      "abstract": "In many problem settings, most notably in game playing, an agent receives a possibly delayed reward for its actions. Often, those rewards are handcrafted and not naturally given. Even simple terminal-only rewards, like winning equals 1 and losing equals -1, can not be seen as an unbiased statement, since these values are chosen arbitrarily, and the behavior of the learner may change with different encodings, such as setting the value of a loss to -0:5, which is often done in practice to encourage learning. It is hard to argue about good rewards and the performance of an agent often depends on the design of the reward signal. In particular, in domains where states by nature only have an ordinal ranking and where meaningful distance information between game state values are not available, a numerical reward signal is necessarily biased. In this paper, we take a look at Monte Carlo Tree Search (MCTS), a popular algorithm to solve MDPs, highlight a reoccurring problem concerning its use of",
+      "relevance_score": 0.5,
+      "summary_type": "abstract",
+      "detailed_summary": null,
+      "focus_areas": []
+    },
+    {
+      "arxiv_id": "2506.11009v1",
+      "title": "Human-In-The-Loop Software Development Agents: Challenges and Future Directions",
+      "authors": [
+        "Jirat Pasuksmit",
+        "Wannita Takerngsaksiri",
+        "Patanamon Thongtanunam",
+        "Chakkrit Tantithamthavorn",
+        "Ruixiong Zhang",
+        "Shiyan Wang",
+        "Fan Jiang",
+        "Jing Li",
+        "Evan Cook",
+        "Kun Chen",
+        "Ming Wu"
+      ],
+      "abstract": "Multi-agent LLM-driven systems for software development are rapidly gaining traction, offering new opportunities to enhance productivity. At Atlassian, we deployed Human-in-the-Loop Software Development Agents to resolve Jira work items and evaluated the generated code quality using functional correctness testing and GPT-based similarity scoring. This paper highlights two major challenges: the high computational costs of unit testing and the variability in LLM-based evaluations. We also propose future research directions to improve evaluation frameworks for Human-In-The-Loop software development tools.",
+      "relevance_score": 0.5,
+      "summary_type": "abstract",
+      "detailed_summary": null,
+      "focus_areas": []
+    },
+    {
+      "arxiv_id": "2406.04710v2",
+      "title": "Morescient GAI for Software Engineering (Extended Version)",
+      "authors": [
+        "Marcus Kessel",
+        "Colin Atkinson"
+      ],
+      "abstract": "The ability of Generative AI (GAI) technology to automatically check, synthesize and modify software engineering artifacts promises to revolutionize all aspects of software engineering. Using GAI for software engineering tasks is consequently one of the most rapidly expanding fields of software engineering research, with over a hundred LLM-based code models having been published since 2021. However, the overwhelming majority of existing code models share a major weakness - they are exclusively trained on the syntactic facet of software, significantly lowering their trustworthiness in tasks dependent on software semantics. To address this problem, a new class of \"Morescient\" GAI is needed that is \"aware\" of (i.e., trained on) both the semantic and static facets of software. This, in turn, will require a new generation of software observation platforms capable of generating large quantities of execution observations in a structured and readily analyzable way. In this paper, we present a ",
+      "relevance_score": 0.5,
+      "summary_type": "abstract",
+      "detailed_summary": null,
+      "focus_areas": []
+    },
+    {
+      "arxiv_id": "1902.04347v4",
+      "title": "A Multilevel Monte Carlo Asymptotic-Preserving Particle Method for Kinetic Equations in the Diffusion Limit",
+      "authors": [
+        "Emil L\u00f8vbak",
+        "Giovanni Samaey",
+        "Stefan Vandewalle"
+      ],
+      "abstract": "We propose a multilevel Monte Carlo method for a particle-based asymptotic-preserving scheme for kinetic equations. Kinetic equations model transport and collision of particles in a position-velocity phase-space. With a diffusive scaling, the kinetic equation converges to an advection-diffusion equation in the limit of zero mean free path. Classical particle-based techniques suffer from a strict time-step restriction to maintain stability in this limit. Asymptotic-preserving schemes provide a solution to this time step restriction, but introduce a first-order error in the time step size. We demonstrate how the multilevel Monte Carlo method can be used as a bias reduction technique to perform accurate simulations in the diffusive regime, while leveraging the reduced simulation cost given by the asymptotic-preserving scheme. We describe how to achieve the necessary correlation between simulation paths at different levels and demonstrate the potential of the approach via numerical experim",
+      "relevance_score": 0.2,
+      "summary_type": "abstract",
+      "detailed_summary": null,
+      "focus_areas": []
+    },
+    {
+      "arxiv_id": "0306182v1",
+      "title": "Metropolis Methods for Quantum Monte Carlo Simulations",
+      "authors": [
+        "D. M. Ceperley"
+      ],
+      "abstract": "Since its first description fifty years ago, the Metropolis Monte Carlo method has been used in a variety of different ways for the simulation of continuum quantum many-body systems. This paper will consider some of the generalizations of the Metropolis algorithm employed in quantum Monte Carlo: Variational Monte Carlo, dynamical methods for projector monte carlo ({\\it i.e.} diffusion Monte Carlo with rejection), multilevel sampling in path integral Monte Carlo, the sampling of permutations, cluster methods for lattice models, the penalty method for coupled electron-ionic systems and the Bayesian analysis of imaginary time correlation functions.",
+      "relevance_score": 0.2,
+      "summary_type": "abstract",
+      "detailed_summary": null,
+      "focus_areas": []
+    }
+  ],
+  "errors": []
+}
